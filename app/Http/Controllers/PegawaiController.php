@@ -9,8 +9,8 @@ class PegawaiController extends Controller
     public function index()
     {
         //
-        $pegawai = Pegawai::all();
-        return view('pegawai', compact('pegawai'));
+        $pegawai = Pegawai::latest()->paginate(10);
+        return view('pegawai.index',['title'=>'halaman pegawai'], compact('pegawai'));
     }
     public function create()
     {
