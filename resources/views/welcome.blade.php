@@ -22,6 +22,7 @@
                 </a>
                 <a href="#" class="flex items-center p-4 text-black">
                     <i class="fas fa-users mr-2"></i> Pegawai
+
                 </a>
                 <a href="#" class="flex items-center p-4 text-black">
                     <i class="fas fa-chart-bar mr-2"></i> Data Penjualan
