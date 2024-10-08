@@ -57,7 +57,7 @@ class PelangganController extends Controller
     {
         //
         $pelanggan = Pelanggan::find($id);
-        return view('pegawai.edit', compact('pegawai'));
+        return view('pelanggan.edit', compact('pelanggan'));
     }
 
     /**
