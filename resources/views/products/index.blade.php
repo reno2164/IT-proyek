@@ -20,7 +20,7 @@
                                     <th scope="col">no</th>
                                     <th scope="col">Gambar</th>
                                     <th scope="col">Nama</th>
-                                    <th scope="col">Harga</th>
+                                    <th scope="col">Harga/kg</th>
                                     <th scope="col">Stok</th>
                                     <th scope="col">Aksi</th>
                                 </tr>

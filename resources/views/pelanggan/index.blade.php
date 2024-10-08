@@ -6,7 +6,7 @@
                 <h2 class="m-0">Data Pelanggan</h2>
             </div>
             <div class="col-auto">
-                <a href="{{ route('pelanggan.create') }}" class="btn btn-success"><i class="fa-solid fa-plus"></i> Tambah Produk</a>
+                <a href="{{ route('pelanggan.create') }}" class="btn btn-success"><i class="fa-solid fa-plus"></i> Tambah pelanggan</a>
             </div>
         </div>
         <div class="card border shadow-sm rounded">
