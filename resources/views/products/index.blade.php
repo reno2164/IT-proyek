@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot:title>{{$title}}</x-slot:title>
-    <div class="container mt-5">
+    <div class="container mt-4">
         <div class="row">
             <div class="col-md-12">
                 <div class="row align-items-center mb-3">
@@ -11,7 +11,7 @@
                         <a href="{{ route('products.create') }}" class="btn btn-success"><i class="fa-solid fa-plus"></i> Tambah Produk</a>
                     </div>
                 </div>
-                <div class="card border-0 shadow-sm rounded">
+                <div class="card border shadow-sm rounded">
                     <div class="card-body">
                         
                         <table class="table table-bordered">

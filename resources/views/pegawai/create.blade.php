@@ -27,7 +27,7 @@
 
             <div class="mb-3">
                 <label for="no_telpon" class="form-label">No. Telp</label>
-                <input type="text" name="no_telpon" class="form-control" id="no_telpon" required>
+                <input type="number" name="no_telpon" class="form-control" id="no_telpon" required>
             </div>
 
             <button type="submit" class="btn btn-primary">Simpan</button>

@@ -17,7 +17,7 @@
                         <form action="{{ route('products.update', $product->id) }}" method="POST" enctype="multipart/form-data">
                         
                             @csrf
-                            @method('PUT')
+                            @method('PUT') 
 
                             <div class="form-group mb-3">
                                 <label class="font-weight-bold">IMAGE</label>
