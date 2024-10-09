@@ -2,8 +2,8 @@
     <x-slot:title>{{ $title }}</x-slot:title>
     <main class="container mt-4">
         <div class="row align-items-center mb-3">
-            <div class="col">
-                <h2 class="m-0">Data Pelanggan</h2>
+            <div class="col text-center"> 
+                <h2 class="m-0 font-weight-bold" style="font-size: 36px;">Data Pelanggan</h2> 
             </div>
             <div class="col-auto">
                 <a href="{{ route('pelanggan.create') }}" class="btn btn-success"><i class="fa-solid fa-plus"></i> Tambah pelanggan</a>
@@ -11,7 +11,7 @@
         </div>
         <div class="card border shadow-sm rounded">
             <div class="card-body">
-                <table class="table table-bordered">
+                <table class="table table-bordered text-center">
                     <thead>
                         <tr>
                             <th scope="col">No</th>
