@@ -2,20 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pegawai;
+use App\Models\pelanggan;
 use Illuminate\Http\Request;
-class PegawaiController extends Controller
+
+class PelangganController extends Controller
 {
     public function index()
     {
         //
-        $pegawai = Pegawai::latest()->paginate(10);
-        return view('pegawai.index',['title'=>'halaman pegawai'], compact('pegawai'));
+        $pelanggan = Pelanggan::latest()->paginate(10);
+        return view('pelanggan.index', ['title' => 'halaman pelanggan'], compact('pelanggan'));
     }
     public function create()
     {
         //
-        return view('pegawai.create');
+        return view('pelanggan.create');
     }
 
     /**
@@ -27,16 +28,16 @@ class PegawaiController extends Controller
         $request->validate([
             'nama' => 'required|string|max:255',
             'alamat' => 'required|string',
-            'no_telpon' => 'required|numeric|digits_between:10,15',
+            'no_telpon' => 'required|integer|min:10|max:15',
         ]);
 
-        Pegawai::create([
+        Pelanggan::create([
             'nama' => $request->nama,
             'alamat' => $request->alamat,
             'no_telpon' => $request->no_telpon,
         ]);
 
-        return redirect()->route('pegawai.index')->with('success', 'Pegawai berhasil ditambahkan.');
+        return redirect()->route('pelanggan.index')->with('success', 'Pelanggan berhasil ditambahkan.');
     }
 
     /**
@@ -45,8 +46,8 @@ class PegawaiController extends Controller
     public function show(string $id)
     {
         //
-        $pegawai = Pegawai::findOrFail($id);
-        return view('pegawai.show', compact('pegawai'));
+        $pelanggan = Pelanggan::findOrFail($id);
+        return view('pelanggan.show', compact('pelanggan'));
     }
 
     /**
@@ -55,8 +56,8 @@ class PegawaiController extends Controller
     public function edit(string $id)
     {
         //
-        $pegawai = Pegawai::find($id);
-        return view('pegawai.edit', compact('pegawai'));
+        $pelanggan = Pelanggan::find($id);
+        return view('pelanggan.edit', compact('pelanggan'));
     }
 
     /**
@@ -70,14 +71,14 @@ class PegawaiController extends Controller
             'no_telpon' => 'required',
         ]);
 
-        $pegawai = Pegawai::find($id);
-        $pegawai->update([
+        $pelanggan = Pelanggan::find($id);
+        $pelanggan->update([
             'nama' => $request->nama,
             'alamat' => $request->alamat,
             'no_telpon' => $request->no_telpon,
         ]);
 
-        return redirect()->route('pegawai.index')->with('success', 'Data pegawai berhasil diperbarui.');
+        return redirect()->route('pelanggan.index')->with('success', 'Data pelanggan berhasil diperbarui.');
     }
 
     /**
@@ -85,14 +86,14 @@ class PegawaiController extends Controller
      */
     public function destroy(string $id)
     {
-        $pegawai = Pegawai::find($id);
+        $pelanggan = Pelanggan::find($id);
 
-        if (!$pegawai) {
-            return redirect()->route('pegawai.index')->with('error', 'Pegawai tidak ditemukan.');
+        if (!$pelanggan) {
+            return redirect()->route('pelanggan.index')->with('error', 'pelanggan tidak ditemukan.');
         }
 
-        $pegawai->delete();
+        $pelanggan->delete();
 
-        return redirect()->route('pegawai.index')->with('success', 'Pegawai berhasil dihapus.');
+        return redirect()->route('pelanggan.index')->with('success', 'pelanggan berhasil dihapus.');
     }
 }
