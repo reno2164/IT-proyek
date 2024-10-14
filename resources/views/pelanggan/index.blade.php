@@ -3,7 +3,7 @@
     <main class="container mt-4">
         <div class="row align-items-center mb-3">
             <div class="col">
-                <h2 class="m-0">Data Pelanggann</h2>
+                <h2 class="m-0">Data Pelanggan</h2>
             </div>
             <div class="col-auto">
                 <a href="{{ route('pelanggan.create') }}" class="btn btn-success"><i class="fa-solid fa-plus"></i> Tambah pelanggan</a>

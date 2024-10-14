@@ -28,8 +28,13 @@
                             <p>{!! $product->description !!}</p>
                         </code>
                         <hr/>
-                        <p>Stock : {{ $product->stock }}</p>
+                        <p>Stock : {{ $product->stok }}</p>
                     </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-end">
+                    <a href="{{ route('prod ucts.index') }}" class="btn btn-sm btn-danger">kembali</a>
                 </div>
             </div>
         </div>
